@@ -1,0 +1,113 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.example {
+  min-height: 100vh;
+  background-color: #e1e1e1;
+  border-bottom: 2px solid;
+}
+
+.scroller {
+  position: fixed;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.2em;
+  background-color: #838383;
+  border-radius: 50%;
+  line-height: 1px;
+  color: #fff;
+  bottom: 100px;
+  right: 10px;
+  .material-icons {
+    font-size: 40px;
+  }
+}
+
+// Example 1
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  height: 300px;
+  width: 500px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  &-wrapper {
+    &.open .modal {
+      display: flex;
+    }
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    border: 1px solid;
+    margin: 50px;
+    cursor: pointer;
+
+    &-transformed {
+      transform: translate(250px, -250px);
+    }
+  }
+}
+
+// Workouround for transition loosing child background mixin
+// mix-blend-mode
+// animmation
+
+// row > icon (with shadow root)  > mix blend mode
+
+// ----------
+
+// icons - size of container
+
+// Example 2
+.example-inside-wrapper {
+  position: relative;
+}
+
+.base {
+  padding: 30px;
+  text-align: center;
+
+  &-transform {
+    transform: rotate(0deg); // This transform mess up blend mode of content
+  }
+
+  .icon {
+    &-container {
+      display: inline-block;
+      background-color: #bada55;
+      color: #049e62;
+      padding: 20px;
+      border-radius: 50%;
+      mix-blend-mode: multiply;
+    }
+
+    i {
+      font-size: 100px;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS presentation</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <div class="example example-1">
+      <h3>Position fixed within transformed container</h3>
+      <div class="modal-wrapper">
+        <p>Modal wrapper</p>
+        <small>click to open</small>
+        <div class="modal">Modal 1</div>
+      </div>
+      <div class="modal-wrapper modal-wrapper-transformed">
+        <p>Modal wrapper with transform</p>
+        <small>click to open</small>
+        <div class="modal">Modal 2</div>
+      </div>
+    </div>
+
+    <div class="example example-2">
+      <h3>Backgrounds mix-blend-mode with transform</h3>
+      <div class="base">
+        <div class="icon-container">
+          <div class="icon"><i class="material-icons">star</i></div>
+        </div>
+      </div>
+      <div class="base base-transform">
+        <div class="icon-container">
+          <div class="icon"><i class="material-icons">star</i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example example-3">
+      <h3>Transform mess up z-index even with position fixed</h3>
+    </div>
+
+    <div class="example example-4">
+      <h3>
+        Icon with no style - wrapper contains extra height (more than icon size)
+      </h3>
+    </div>
+
+    <div class="example example-5"></div>
+
+    <div class="example example-6"></div>
+
+    <div class="example example-7"></div>
+
+    <div class="example example-8"></div>
+
+    <div class="example example-9"></div>
+
+    <div class="example example-10"></div>
+
+    <div class="scroller"><i class="material-icons">arrow_drop_down</i></div>
+    <script src="./index.js"></script>
+  </body>
+</html>
