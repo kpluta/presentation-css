@@ -40,110 +40,114 @@ body {
 }
 
 // Example 1
+.example-1 {
+  .modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 
-.modal {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+    height: 300px;
+    width: 500px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
 
-  height: 300px;
-  width: 500px;
-  background-color: #fff;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-  display: none;
-  align-items: center;
-  justify-content: center;
+    &-wrapper {
+      &.open .modal {
+        display: flex;
+      }
+      height: 200px;
+      width: 200px;
+      padding: 20px;
+      border: 1px solid;
+      margin: 50px;
+      cursor: pointer;
 
-  &-wrapper {
-    &.open .modal {
-      display: flex;
-    }
-    height: 200px;
-    width: 200px;
-    padding: 20px;
-    border: 1px solid;
-    margin: 50px;
-    cursor: pointer;
-
-    &-transformed {
-      transform: translate(250px, -250px);
+      &-transformed {
+        transform: translate(250px, -250px);
+      }
     }
   }
 }
 
 // Example 2
-.example-inside-wrapper {
-  position: relative;
-}
-
-.base {
-  padding: 30px;
-  text-align: center;
-
-  &-transform {
-    transform: rotate(0deg); // This transform mess up blend mode of content
+.example-2 {
+  .example-inside-wrapper {
+    position: relative;
   }
 
-  .icon {
-    &-container {
-      display: inline-block;
-      background-color: #bada55;
-      color: #049e62;
-      padding: 20px;
-      border-radius: 50%;
-      mix-blend-mode: multiply;
+  .base {
+    padding: 30px;
+    text-align: center;
+
+    &-transform {
+      transform: rotate(0deg); // This transform mess up blend mode of content
     }
 
-    i {
-      font-size: 100px;
+    .icon {
+      &-container {
+        display: inline-block;
+        background-color: #bada55;
+        color: #049e62;
+        padding: 20px;
+        border-radius: 50%;
+        mix-blend-mode: multiply;
+      }
+
+      i {
+        font-size: 100px;
+      }
     }
   }
 }
 
 // Example 3
-.container {
-  &-wrapper {
-    position: relative;
-    min-height: 400px;
-    border: 2px solid;
-    margin: 10px;
-    background-color: #e0ffe2;
-  }
-
-  &-transformed {
-    transform: translateX(0px);
-  }
-
-  &-children {
-    height: 100px;
-    width: 500px;
-    background-color: #bada55;
-    border: 1px solid;
-    position: absolute;
-    &:hover {
-      background-color: #e6faa6;
+.example-3 {
+  .container {
+    &-wrapper {
+      position: relative;
+      min-height: 400px;
+      border: 2px solid;
+      margin: 10px;
+      background-color: #e0ffe2;
     }
 
-    &-first {
-      left: 50px;
-      top: 100px;
-      z-index: 30;
+    &-transformed {
+      transform: translateX(0px);
     }
-    &-second {
-      left: 100px;
-      top: 150px;
-      z-index: 20;
-    }
-    &-third {
-      left: 150px;
-      top: 200px;
-      z-index: 10;
+
+    &-children {
+      height: 100px;
+      width: 500px;
+      background-color: #bada55;
+      border: 1px solid;
+      position: absolute;
+      &:hover {
+        background-color: #e6faa6;
+      }
+
+      &-first {
+        left: 50px;
+        top: 100px;
+        z-index: 30;
+      }
+      &-second {
+        left: 100px;
+        top: 150px;
+        z-index: 20;
+      }
+      &-third {
+        left: 150px;
+        top: 200px;
+        z-index: 10;
+      }
     }
   }
 }
-
 
 .example-4 {
   .icon-container {
@@ -163,6 +167,32 @@ body {
     .material-icons {
       background-color: #8bbaff;
       font-size: 100px;
+    }
+  }
+}
+
+.example-5 {
+  .container {
+    background-color: #8bbaff;
+    margin-bottom: 15px;
+
+    &-flex {
+      display: flex;
+    }
+
+    &-float {
+      .container-element {
+        float: left;
+      }
+    }
+
+    &-element {
+      display: inline-block;
+      height: 100px;
+      background-color: #049e62;
+      width: 25%;
+      font-size: 30px;
+      color: #fff;
     }
   }
 }

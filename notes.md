@@ -39,3 +39,15 @@ Solution:
 
 - build your project with minified files version
 - use flexbox
+
+Example 5:
+
+Problem:
+
+- displaying elements with inline-block contains white spaces
+
+Solution:
+
+- build your project with minified files version
+- use flexbox
+- use float on elements
