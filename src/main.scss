@@ -143,3 +143,26 @@ body {
     }
   }
 }
+
+
+.example-4 {
+  .icon-container {
+    background-color: #e3ffd1;
+    margin: 0 50px 15px 50px;
+    text-align: center;
+
+    &-flex {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-no-white-space {
+      font-size: 0;
+    }
+
+    .material-icons {
+      background-color: #8bbaff;
+      font-size: 100px;
+    }
+  }
+}

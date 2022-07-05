@@ -28,3 +28,14 @@ Solution:
 
 - use z-indexes positioning within elements on the same DOM level
 - use transform as a feature to isolate elements from upper level z-index positioned elements
+
+Example 4:
+
+Problem:
+
+- white space add extra empty space to the icon, so the container height is not equal to icon height
+
+Solution:
+
+- build your project with minified files version
+- use flexbox
