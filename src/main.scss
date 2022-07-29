@@ -23,22 +23,6 @@ body {
   border-bottom: 2px solid;
 }
 
-.scroller {
-  position: fixed;
-  cursor: pointer;
-  padding: 8px;
-  font-size: 1.2em;
-  background-color: #838383;
-  border-radius: 50%;
-  line-height: 1px;
-  color: #fff;
-  bottom: 100px;
-  right: 10px;
-  .material-icons {
-    font-size: 40px;
-  }
-}
-
 // Example 1
 .example-1 {
   .modal {
@@ -183,6 +167,11 @@ body {
     &-float {
       .container-element {
         float: left;
+      }
+      &::after {
+        content: "";
+        clear: both;
+        display: block;
       }
     }
 
