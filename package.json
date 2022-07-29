@@ -16,5 +16,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-webserver": "^0.9.1",
     "sass": "^1.53.0"
+  },
+  "dependencies": {
+    "gulp-open": "^3.0.1"
   }
 }
